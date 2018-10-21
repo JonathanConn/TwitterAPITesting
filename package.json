@@ -9,6 +9,8 @@
   "author": "Jonathan Conn",
   "license": "ISC",
   "dependencies": {
-    "twit": "^2.2.11"
+    "twit": "^2.2.11",
+    "twitter": "^1.7.1",
+    "twitter-stream-api": "^0.5.2"
   }
 }

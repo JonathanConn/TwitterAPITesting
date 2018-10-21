@@ -8,6 +8,9 @@ var T = new Twit({
   access_token:         '3692376076-t4pNeulz7BTBtBNdGrBYIkxqqjcXQke1SquPkrx',
   access_token_secret:  'E0Xg8ejLaRz9uB0lmmof2W5fB6dwNXRhOr23FGBaPeXVZ'
 })
-T.post('statuses/update', { status: 'I am a bot!' }, function(err, data, response) {
-  console.log(data)
+
+var stream = T.stream('statuses/filter', {track: 'Trump'})
+
+stream.on('tweet', function (msg) {
+  console.log(msg);
 })
